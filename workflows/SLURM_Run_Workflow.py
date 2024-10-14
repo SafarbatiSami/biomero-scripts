@@ -134,6 +134,8 @@ def runScript():
         na = ["Not Available!"]
         _workflow_params = {}
         _workflow_available_versions = {}
+        if 'biom3d' in wf_versions:
+           del wf_versions['biom3d']
         # All currently configured workflows
         workflows = wf_versions.keys()
         for group_incr, wf in enumerate(workflows):
